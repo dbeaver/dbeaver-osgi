@@ -1,5 +1,5 @@
 /*******************************************************************************
- * Copyright (c) 2025, 2026 IBM Corporation and others.
+ * Copyright (c) 2025 IBM Corporation and others.
  *
  * This program and the accompanying materials
  * are made available under the terms of the Eclipse Public License 2.0
@@ -273,9 +273,9 @@ public class PlurlStreamHandlerFactoryTest
 
 		PlurlTestHandlers.TestURLStreamHandlerFactory catchAll = new PlurlTestHandlers.CatchAllPlurlFactory("jar");
 		plurlTestHandlers.add(TestFactoryType.PLURL_FACTORY, catchAll);
-		checkURL("jar:file:///path/to/some.jar!/some/file.txt", false);
+		checkURL("jar:file://path/to/some.jar!/some/file.txt", false);
 		plurlTestHandlers.remove(TestFactoryType.PLURL_FACTORY, catchAll);
-		checkBuiltinProtocol("jar:file:///path/to/some.jar!/some/file.txt");
+		checkBuiltinProtocol("jar:file://path/to/some.jar!/some/file.txt");
 	}
 
 	private void checkBuiltinProtocol(String spec) throws IOException {
@@ -400,3 +400,4 @@ public class PlurlStreamHandlerFactoryTest
 		}
 	}
 }
+
