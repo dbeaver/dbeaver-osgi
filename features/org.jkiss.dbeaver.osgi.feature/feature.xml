@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feature id="org.jkiss.dbeaver.osgi.feature"
+         label="DBeaver Equinox framework patch"
+         version="1.0.0.qualifier"
+         provider-name="DBeaver Corp">
+    <description>Use the DBeaver Equinox framework in Eclipse RCP products.</description>
+    <copyright>DBeaver Corp and others</copyright>
+
+    <requires>
+        <import feature="org.eclipse.e4.rcp" version="4.41.0" match="equivalent" patch="true"/>
+    </requires>
+
+    <plugin id="org.eclipse.osgi" version="3.24.301.qualifier" unpack="false"/>
+</feature>
